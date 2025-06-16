@@ -1,0 +1,112 @@
+\chapter{Measurement}
+
+\section{Physical Quantities and SI Units}
+
+\begin{definition}
+    A \vocab{physical quantity} is a scientifically measurable quantity, and consists of a numerical value and a unit.
+\end{definition}
+
+Physical quantities can be classified as \emph{base} or \emph{derived} quantities, and likewise for units.
+
+\begin{definition}
+    A \vocab{base quantity} is one that is not dependent on other quantities. The units of base quantities are called \vocab{base units}.
+\end{definition}
+
+The seven SI base quantities (and their units) are:
+
+\begin{figure}[H]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{Base Quantity} & \textbf{Base Unit} & \textbf{Symbol} \\\hline\hline
+        Mass & Kilogram & kg \\\hline
+        Length & Metre & m \\\hline
+        Time & Second & s \\\hline
+        Temperature & Kelvin & K \\\hline
+        Amount of Substance & Mole & mol \\\hline
+        Electric Current & Ampere & A \\\hline
+        Luminous Intensity & Candela & cd\\\hline
+    \end{tabular}
+    \caption{The seven SI base quantities and units.}
+\end{figure}
+
+\begin{definition}
+    A \vocab{derived quantity} is one that is expressed as a product/quotient of base quantities. A derived quantity has a \vocab{derived unit} that is expressed as a product/quotient of base units.
+\end{definition}
+
+\begin{definition}
+    An equation is \vocab{homogeneous} if all terms have the same units.
+\end{definition}
+
+A physically correct equation must be homogeneous.
+
+\section{Scalar and Vectors}
+
+\begin{definition}
+    \vocab{Scalars} are quantities that have magnitude only.
+\end{definition}
+
+\begin{definition}
+    \vocab{Vectors} are quantities that have both magnitude and direction.
+\end{definition}
+
+Geometrically, a vector can be represented with an arrow whose direction represents its relative direction and whose length represents its relative magnitude.
+
+For vector algebra, see \href{https://asdia.dev/projects/triplemath/docs/TripleMath.pdf#chapter.8}{here}.
+
+\section{Errors and Uncertainties}
+
+\begin{definition}
+    \vocab{Uncertainty} is the range of values on both sides of a measurement in which the actual value of the measurement is expected to lie.
+\end{definition}
+
+Uncertainties in measured quantities arise from
+\begin{itemize}
+    \item limitations of the observer;
+    \item limitations of the measuring instrument used;
+    \item limitations of the method used.
+\end{itemize}
+
+\begin{definition}
+    \vocab{Error} is the difference between the measured value and the true value.
+\end{definition}
+
+There are two types of errors: systematic and random.
+
+\begin{definition}
+    \vocab{Systematic errors} are constant deviations of the readings in one direction from the true value.
+\end{definition}
+
+Systematic errors can be eliminated by careful experimental design and good experimental techniques.
+
+\begin{definition}
+    \vocab{Random errors} refer to the scatter of readings about a mean value (usually the sum of the true value and all systematic errors).
+\end{definition}
+
+Random errors cannot be eliminated, but their effects can be reduced by taking the average of repeated readings.
+
+\subsection{Precision and Accuracy}
+
+\begin{definition}
+    \vocab{Precision} is the degree of agreement among repeated measurements of the same quantity.
+\end{definition}
+
+Good precision is associated with small random errors.
+
+\begin{definition}
+    \vocab{Accuracy} is the degree of agreement between measurements and the true value.
+\end{definition}
+
+Good accuracy is associated with small systematic errors.
+
+\subsection{Derived Uncertainties}
+
+\begin{definition}
+    The uncertainty $\D x$ in the value $x \pm \D x$ of a quantity is also called its \vocab{absolute uncertainty}. The corresponding \vocab{relative uncertainty} is given by $\D x / x$.
+\end{definition}
+
+\begin{itemize}
+    \item If $Z = m A + n B$, then \[\D Z = \abs{m} \D A + \abs{n} \D B.\]
+    \item If $Z = k A^m B^n$, then \[\frac{\D Z}{Z} = \abs{m} \frac{\D A}{A} + \abs{n} \frac{\D B}{B}.\]
+    \item Else, we compute $\D Z$ using \[\D Z = \frac{Z_{\text{max}} - Z_{\text{min}}}{2}.\]
+\end{itemize}

@@ -1,0 +1,153 @@
+\chapter{First Law of Thermodynamics}
+
+\section{Specific Heat Capacity and Specific Latent Heat}
+
+\subsection{Specific Heat Capacity}
+
+\begin{definition}
+    The \vocab{specific heat capacity} ($c$) of a substance is defined as the heat per unit mass required to cause a unit change in its temperature, without going through a change in state. Mathematically, \[c = \frac{Q}{m\D T},\] where $Q$ is the heat supplied, $m$ is the mass of the substance, and $\D T$ is the change in temperature of the substance.
+\end{definition}
+
+The SI unit of specific heat capacity is J kg$^{-1}$ K$^{-1}$.
+
+\begin{definition}
+    The \vocab{heat capacity} ($C$) of a substance is defined as the heat required to cause a unit change in its temperature, without going through a change in state. Mathematically, \[C = \frac{Q}{\D T} = mc.\]
+\end{definition}
+
+The SI unit of heat capacity is J K$^{-1}$.
+
+\subsection{Specific Latent Heat}
+
+\begin{definition}
+    The \vocab{specific latent heat} ($L$) of a substance is the amount of heat per unit mass required to change its state without changing its temperature. Mathematically, \[L = \frac{Q}{m}.\]
+\end{definition}
+
+The SI unit of specific latent heat is J kg$^{-1}$.
+
+For the change of state between solid and liquid, it is known as the specific latent heat of \vocab{fusion}, and it occurs at the substance's melting point.
+
+For the change of state between liquid and gas, it is known as the specific latent heat of \vocab{vaporization}, and it occurs at the substance's boiling point.
+
+\section{Internal Energy}
+
+A body possesses energy due to its physical state and its state properties (e.g. pressure, temperature), because in changing from one state to another, it can do work (e.g. causing itself or other bodies to move and/or gain energy).
+
+\begin{definition}
+    The \vocab{internal energy} ($U$) of a body is its ability to do work due to its state. It can be expressed as the sum of a random distribution of kinetic and potential energies associated with the molecules of a system. Mathematically, \[U = E_k = E_p,\] where $E_k$ is the internal kinetic energy and $E_p$ is the internal potential energy.
+\end{definition}
+
+The internal kinetic energy of a substance is the total energy of the atoms and molecules in the substance due to their translational, rotational and vibrational motion. It depends on the temperature of the substance.
+
+The internal potential energy of a substance is the total energy of the atoms and molecules in the substance due to intermolecular forces. It depends on the separation of the atoms and molecules.
+
+Note that the internal energy of a system depends only on the state that it is in, and not on how it reached that state.
+
+\begin{proposition}
+    The internal energy $U$ of an ideal gas with $N$ molecules is given by \[U = \frac32 NkT = \frac32 pV = \frac32 nRT.\]
+\end{proposition}
+\begin{proof}
+    An ideal gas is assumed to have negligible intermolecular forces of attraction, hence $E_p = 0$ and the internal energy is simply $U = E_k$. Recall that the kinetic energy of a single particle is $3kT/2$, so the total kinetic energy of the gas is \[U = E_k = \frac32 NkT.\]
+\end{proof}
+
+This implies that at absolute zero ($T = 0$), the internal energy of an ideal gas is 0.
+
+\subsection{Melting and Boiling}
+
+From the kinetic theory, the mean random kinetic energy of the molecules in a substance is directly proportional to its temperature.
+
+In melting and boiling, the heat supplied is used by the molecules to do work against the intermolecular attractions, allowing them to move freely within the substance, increasing $E_p$. Meanwhile, no work is done to increase the mean kinetic energy of the molecules, hence temperature and $E_k$ remain the same.
+
+In boiling, however, the heat supplied is also used to do work against atmospheric pressure. Given further that the molecules now much further apart (as compared to boiling), the specific latent heat of vaporization is hence higher than the specific latent heat of fusion.
+
+\section{First Law of Thermodynamics}
+
+\begin{law}
+    The increase in the internal energy of a system is the sum of the heat supplied to the system and the work done on the system. \[\D U = Q + W.\]
+\end{law}
+
+Note that if the heat is supplied by the system, $Q$ would be negative. Likewise, if work is done by the system, $W$ would be negative.
+
+The work done on the system depends on the expansion/contraction of the system. Recall that \[W = -\int_{V_1}^{V_2} p \d V.\] If $V_2 < V_1$, volume decreases and $W$ is positive, hence work is done on the system. If $V_2 > V_1$, volume increases and $W$ is negative, hence work is done by the system.
+
+\subsection{Thermodynamic Processes}
+
+\begin{definition}
+    A \vocab{thermodynamic process} refers to a change in the state of the system. The succession of states through which the system passes is the \vocab{path} of the process.
+\end{definition}
+
+The state of a system can be represented by a point on a $p$-$V$ graph.
+
+There are four common thermodynamic processes for an ideal gas:
+
+\begin{definition}
+    In an \vocab{isochoric} process, the volume of the system is constant.
+\end{definition}
+
+Since volume is constant, no work is done. Hence, the first law of thermodynamics simplifies to $\D U = Q$.
+
+\begin{definition}
+    In an \vocab{isobaric} process, pressure is constant.
+\end{definition}
+
+Since pressure is constant, the work done is simply $W = p\D V$.
+
+\begin{definition}
+    In an \vocab{isothermal} process, temperature is constant.
+\end{definition}
+
+From the equation of state $pV = nRT$, we see that $pV$ is also constant, so \[\D U = \frac32 p_i V_i - \frac32 p_f V_f = 0.\] From this, we deduce that $Q = -W$. 
+
+\begin{definition}
+    In an \vocab{adiabatic} process, there is no heat exchange between the system and the surroundings ($Q = 0$).
+\end{definition}
+
+From the first law of thermodynamics, we have $\D U = W$.
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[trim axis left, trim axis right]
+        \begin{axis}[
+            domain = 0:3.2,
+            xmin = 0,
+            ymin = 0,
+            axis equal image,
+            restrict y to domain =0:3.2,
+            samples = 101,
+            axis y line=middle,
+            axis x line=middle,
+            xtick = \empty,
+            ytick = \empty,
+            xlabel = {$V$},
+            ylabel = {$p$},
+            legend cell align={left},
+            legend pos=outer north east,
+            ]
+
+            \addlegendimage{red, very thick};
+            \addlegendentry{Isochoric};
+
+            \addlegendimage{orange, very thick};
+            \addlegendentry{Isobaric};
+
+            \addlegendimage{ForestGreen, very thick};
+            \addlegendentry{Isothermal};
+
+            \addlegendimage{blue, very thick};
+            \addlegendentry{Adiabatic};
+
+            \addplot[dashed] {1/x};
+            \addplot[dashed] {2/x};
+
+            \draw[->-=0.5, red, very thick] (0.7, 2.857) -- (0.7, 1.429);
+
+            \draw[->-=0.5, orange, very thick] (0.7, 1.429) -- (1.4, 1.429);
+
+            \addplot[ForestGreen, very thick, domain=1.4:2.2] {2/x};
+            \draw[->-=0.5, ForestGreen, very thick] (1.79, 1.117) -- (1.81, 1.105);
+
+            \draw[->-=0.5, blue, very thick] (2.2, 0.909) to[out=-70,in=170] (2.7, 0.370);
+            
+        \end{axis}
+    \end{tikzpicture}
+    \caption{The four common thermodynamic processes.}
+\end{figure}

@@ -1,0 +1,145 @@
+\chapter{Temperature and Ideal Gases}
+
+\section{Thermal Equilibrium}
+
+\begin{definition}
+    The \vocab{temperature} of a region is a measure of the average kinetic energy of the molecules in the region.
+\end{definition}
+
+\begin{definition}
+    \vocab{Heat} is the flow of energy between regions of different temperatures.
+\end{definition}
+
+\begin{definition}
+    Two regions are in \vocab{thermal contact} if heat can flow between them (i.e. by conduction, convection, or radiation).
+\end{definition}
+
+When two regions of different temperatures are in thermal contact, heat will flow from the region with higher temperature to the region with lower temperature. Eventually, the temperatures of the regions will become equal and there will be no further heat transfer.
+
+\begin{definition}
+    Two regions are in \vocab{thermal equilibrium} if there is no net heat transfer between them.
+\end{definition}
+
+\begin{law}[Zeroth Law of Thermodynamics]
+    If bodies A and B are separately in thermal equilibrium with body C, then A and B are also in thermal equilibrium with each other.
+\end{law}
+
+\subsection{Thermometer}
+
+\begin{definition}
+    A \vocab{thermometer} is an instrument that measures the temperature of a system in a quantitative way.
+\end{definition}
+
+\begin{definition}
+    A \vocab{thermometric property} is a physical property of a system that varies regularly with the system's temperature.
+\end{definition}
+
+Examples of thermometric properties include
+\begin{itemize}
+    \item the volume of a fixed mass of liquid,
+    \item the pressure of a fixed mass of gas at constant volume,
+    \item the resistance of a metal, and
+    \item the electromotive force produced between junctions of dissimilar metals that are at different temperatures.
+\end{itemize}
+
+\begin{definition}
+    An \vocab{empirical temperature scale} is a scale of temperature based on a thermometric property that varies linearly with temperature.
+\end{definition}
+
+Because the thermometric property is linearly related to temperature is linear, we only require two fixed points are usually to establish a scale. Typically, we choose
+\begin{itemize}
+    \item the \vocab{ice point}, where pure ice can exist in equilibrium with pure water at 1 atm, and
+    \item the \vocab{steam point}, where pure water can exist in equilibrium with its pure vapour at 1 atm.
+\end{itemize}
+
+\begin{proposition}
+    Let $\t$ represent temperature and let $x(\t)$ be a thermometric property that varies linearly with $\t$. Given two fixed points $(\t_1, x(\t_1))$ and $(\t_2, x(\t_2))$, we have \[\t = \frac{\t_2 - \t_1}{x(\t_2) - x(\t_2)} \bp{x(\t) - x(\t_1)} + \t_1.\]
+\end{proposition}
+\begin{proof}
+    Since $x(\t)$ is linear, by the point-slope formula, \[x(\t) - x(\t_1) = \frac{x(\t_2) - x(\t_1)}{\t_2 - \t_1} \bp{\t - \t_1}.\] Solving for $\t$ yields the claim.
+\end{proof}
+
+\subsection{Kelvin Scale}
+
+\begin{definition}
+    \vocab{Absolute zero} is the temperature at which all substances have a minimum internal energy.
+\end{definition}
+
+A temperature scale having absolute zero as its zero point is called an \vocab{absolute temperature scale}. Such scales do not depend on the thermometric property of any particular substance.
+
+\begin{definition}
+    The \vocab{Kelvin} (K) scale is an absolute temperature scale whose fixed points are absolute zero and the triple point of water.
+\end{definition}
+
+The triple point of water is the particular temperature and pressure (273.16 K, 4.58 mmHg) at which the three states of water can co-exist in equilibrium.
+
+Temperatures on the Kelvin scale ($T$ / K) and the Celsius scale ($\t$ / $\deg$C) are related by \[\text{$T$ / K} = \text{$\t$ / $\deg$C} + 273.15.\]
+
+\section{Ideal Gases}
+
+\subsection{Mole}
+
+\begin{definition}
+    The \vocab{mole} (mol) is the unit of the amount of substance. One mole of a substance contains as many particles of that substance as there are atoms of carbon in 12 grams of carbon-12.
+\end{definition}
+
+\begin{definition}
+    \vocab{Avogadro's constant} ($N_A = 6.02 \times 10^{23}$ mol$^{-1}$) is the number of atoms in 12 grams of carbon-12.
+\end{definition}
+
+Equivalently, one mole of any substance contains $6.02 \times 10^{23}$ particles.
+
+\subsection{Equation of State}
+
+At low pressures and high temperatures, all gases have a very simple relationship between their pressure $p$, volume $V$ and temperature $T$: \[pV = nRT,\] where $n$ is the amount of gas in moles and $R$ ($= 8.31$ J mol$^{-1}$ K$^{-1}$) is the molar gas constant. This equation is known as the \vocab{equation of state of an ideal gas}.
+
+\begin{definition}
+    An \vocab{ideal gas} is a hypothetical gas that obeys the equation of state $pV = nRT$ perfectly at all pressure $p$, volume $V$, amount of substance $n$, and temperature $T$.
+\end{definition}
+
+If we know that the number of molecules, we can use the equivalent formula \[pV = NkT,\] where $N$ ($= n N_A$) represents the number of gas particles and $k$ ($= 1.38 \times 10^{-23}$ J K$^{-1}$) is known as \vocab{Boltzmann's constant}.
+
+\section{Kinetic Theory of Gases}
+
+The kinetic theory of gases is a simplified model of the forces associated with the random and continuous motion of gas molecules. It is a microscopic view from which the macroscopic properties of the gas (such as its pressure, volume and temperature), could be explained, derived and/or predicted.
+
+There are six assumptions made by the theory:
+\begin{enumerate}
+    \item All gases consist of a very large number of particles.
+    \item The particles behave as if they are hard, perfectly elastic, identical spheres.
+    \item There are no forces of attraction or repulsion between particles unless they are in collision with each other or with the walls of the containing vessel.
+    \item The particles are in constant, random motion and obey Newton's laws of motion.
+    \item The total volume of particles is negligible compared to the volume of the containing vessel.
+    \item The time of collisions is negligible compared to the time between collisions.
+\end{enumerate}
+
+Under the kinetic theory of gases, the pressure exerted by a gas is the result of the gas molecules colliding with the walls of the container. Each time a gas molecule collides with and rebounds from a wall, it undergoes a change of momentum, indicating a force is exerted on the molecule by the wall (Newton's second law) and an equal but opposite force on the wall by the molecule (Newton's third law). Continuous random collisions by all molecules of the gas would average out to a steady force on the walls. As pressure is force per unit area of contact, the resulting force on the walls of the container is the pressure exerted by the gas.
+
+\begin{definition}
+    Consider $N$ molecules in a gas with respective molecule speeds $c_1$, $c_2$, $\dots$, $c_N$. The \vocab{mean square speed} ($\ba{c^2}$) of the molecules is the mean of the square of the speeds. \[\ba{c^2} = \frac{c_1^2 + c_2^2 + \dots + c_N^2}{N}.\] The \vocab{root-mean-square speed} ($c_{\text{rms}}$) of the molecules is \[c_{\text{rms}} = \sqrt{\ba{c^2}} = \sqrt{\frac{c_1^2 + c_2^2 + \dots + c_N^2}{N}}.\]
+\end{definition}
+
+\begin{proposition}
+    An ideal gas obeys the relationship \[pV = \frac13 Nm \ba{c^2}.\]
+\end{proposition}
+\begin{proof}
+    Consider a cubical box with side length $l$ containing $N$ particles, each of mass $m$.
+    
+    By considering the elastic collision of one particle with a wall, we note that the change in momentum of the particle due to the collision is \[\D p_{\text{particle}} = m \D v = m \bp{(-c_x) - (c_x)} = -2mc_x,\] where $c_x$ is the $x$-component of the particle's velocity (up to sign convention). Conservation of linear momentum tells us that the wall experiences a change in momentum \[\D p_{\text{wall}} = -\D p_{\text{particle}} = 2m c_x.\] The next time the same particle collides with the same wall, the particle would have travelled a total distance of $2l$ in the same direction. Hence, the time between collisions is \[\D t = \frac{2l}{c_x}.\] Therefore, the rate of change of momentum of the wall due to a single particle is \[\frac{\D p_{\text{wall}}}{\D t} = \frac{2mc_x}{2l/c_x} = \frac{mc_x^2}{l}.\] According to Newton's second law, the total force acting on the wall is the rate of change of momentum of the wall due to all $N$ particles: \[F_{\text{wall}} = \sum_{i = 1}^N \frac{m(c_x)_i^2}{l} = \frac{Nm}{l} \sum_{i = 1}^N \frac{(c_x)_i^2}{N} = \frac{Nm}{l} \ba{c_x^2}.\] The pressure on the wall is force acting per unit area, hence \[p = \frac{F_{\text{wall}}}{l^2} = \frac{Nm}{l^3} \ba{c_x^2} = \frac{Nm}{V} \ba{c_x^2}.\] 
+    
+    By Pythagoras' Theorem, we note that \[\ba{c^2} = \ba{c_x^2} + \ba{c_y^2} + \ba{c_z^2}.\] Because $N$ is large, and the particles are moving randomly (with no preference in any direction), we have $\ba{c_x^2} = \ba{c_y^2} = \ba{c_z^2}$, so \[\ba{c^2} = 3\ba{c_x^2}.\] It follows that \[pV = \frac13 Nm \ba{c^2}.\]
+\end{proof}
+
+\begin{corollary}
+    The average kinetic energy of an ideal gas particle is $3kT/2$.
+\end{corollary}
+\begin{proof}
+    Equating the above result with the equation of state, we see that \[pV = \frac13 Nm \ba{c^2} = NkT \implies \frac12 m \ba{c^2} = \frac32 kT.\]
+\end{proof}
+
+\begin{corollary}
+    The pressure $p$ of an ideal gas of density $\rho$ is given by \[p = \frac13 \rho \ba{c^2}.\]
+\end{corollary}
+\begin{proof}
+    Since $Nm$ is the mass of the gas, we have that $\r = Nm/V$, so \[p = \frac13 \frac{Nm}{V} \ba{c^2} = \frac13 \r \ba{c^2}.\]
+\end{proof}

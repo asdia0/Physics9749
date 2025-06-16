@@ -1,0 +1,170 @@
+\usepackage{asdia}
+
+\usepackage[a4paper,left=3cm,right=3cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage[headsepline]{scrlayer-scrpage}
+\usepackage{tocloft}
+\usepackage{needspace}
+
+\title{Physics}
+\subtitle{\url{https://asdia.dev/projects/physics}}
+\author{{\normalsize Notes taken by}\\Eytan Chong}
+\date{2024--2025}
+
+\let\endtitlepage\relax
+
+\hypersetup{pdfauthor={Eytan Chong},pdfsubject={Dunman High Physics Notes},pdftitle={Physics},pdfkeywords={Dunman High Physics Notes}}
+
+\AfterTOCHead{\pagestyle{plain}}
+\AfterStartingTOC{\clearpage}
+\setcounter{tocdepth}{1}
+
+\clearpairofpagestyles
+\ohead*{\pagemark}
+\chead{\headmark}
+
+\raggedbottom
+
+% environment boxes (modified from evan.sty)
+
+\mdfdefinestyle{mdbluebox}{%
+linewidth=1.5pt,
+innerbottommargin=0pt,
+innertopmargin=0pt,
+linecolor=MidnightBlue,
+nobreak=false,
+rightline=false,
+leftline=false,
+topline=false,
+bottomline=false,
+usetwoside=false,
+leftmargin=-10pt,
+innerleftmargin=8.5pt,
+nobreak=true,
+}
+\declaretheoremstyle[
+spaceabove=0pt,
+spacebelow=0pt,
+headfont=\sffamily\bfseries,
+mdframed={style=mdbluebox},
+headpunct={.},
+]{thmbluebox}
+
+\declaretheorem[style=thmbluebox,name=Theorem,numberwithin=section]{theorem}
+\declaretheorem[style=thmbluebox,name=Law,sibling=theorem]{law}
+\declaretheorem[style=thmbluebox,name=Principle,sibling=theorem]{principle}
+\declaretheorem[style=thmbluebox,name=Fact,sibling=theorem]{fact}
+\declaretheorem[style=thmbluebox,name=Statement,sibling=theorem]{statement}
+\declaretheorem[style=thmbluebox,name=Lemma,sibling=theorem]{lemma}
+\declaretheorem[style=thmbluebox,name=Corollary,sibling=theorem]{corollary}
+\declaretheorem[style=thmbluebox,name=Proposition,sibling=theorem]{proposition}
+
+\mdfdefinestyle{mdpurplebox}{%
+linewidth=1.5pt,
+innerbottommargin=0pt,
+innertopmargin=0pt,
+linecolor=Mulberry!80!black,
+nobreak=false,
+rightline=false,
+leftline=false,
+topline=false,
+bottomline=false,
+usetwoside=false,
+leftmargin=-10pt,
+innerleftmargin=8.5pt,
+nobreak=true,
+}
+\declaretheoremstyle[
+spaceabove=0pt,
+spacebelow=0pt,
+headfont=\sffamily\bfseries,
+mdframed={style=mdpurplebox},
+headpunct={.},
+]{thmpurplebox}
+
+\declaretheorem[style=thmpurplebox,name=Recipe,sibling=theorem]{recipe}
+
+\mdfdefinestyle{mdgreenbox}{%
+linewidth=1.5pt,
+innerbottommargin=0pt,
+innertopmargin=0pt,
+linecolor=ForestGreen,
+nobreak=false,
+rightline=false,
+leftline=false,
+topline=false,
+bottomline=false,
+usetwoside=false,
+leftmargin=-10pt,
+innerleftmargin=8.5pt,
+nobreak=true,
+}
+\declaretheoremstyle[
+spaceabove=0pt, 
+spacebelow=0pt,
+headfont=\sffamily\bfseries,
+mdframed={style=mdgreenbox},
+headpunct={.},
+]{thmgreenbox}
+
+\let\definition\relax
+\declaretheorem[style=thmgreenbox,name=Definition,sibling=theorem]{definition}
+\declaretheorem[style=thmgreenbox,name=Axiom,sibling=theorem]{axiom}
+\declaretheorem[style=thmgreenbox,name=Condition,sibling=theorem]{condition}
+
+\mdfdefinestyle{mdredbox}{%
+linewidth=1.5pt,
+innerbottommargin=0pt,
+innertopmargin=0pt,
+linecolor=RawSienna,
+nobreak=false,
+rightline=false,
+leftline=true,
+topline=false,
+bottomline=false,
+usetwoside=false,
+leftmargin=-10pt,
+innerleftmargin=8.5pt,
+}
+\declaretheoremstyle[
+spaceabove=0pt,
+spacebelow=0pt,
+headfont=\sffamily\bfseries\color{RawSienna},
+mdframed={style=mdredbox},
+headpunct={.},
+]{thmredbox}
+
+\declaretheorem[style=thmredbox,name=Example,sibling=theorem]{example}
+\declaretheorem[style=thmredbox,name=Sample Problem,sibling=theorem]{sample}
+
+\newenvironment{sampans}{\noindent\textit{Solution.}}{\hfill$\square$}
+\newenvironment{sketch}{\noindent\textit{Sketch.}}{\hfill$\square$}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+\newcommand{\overbow}[1]{
+  \tikzexternaldisable
+  \tikz [baseline = (N.base), every node/.style={}] {
+    \node [inner sep = 0pt] (N) {$#1$};
+    \draw [line width = 0.4pt] plot [smooth, tension=1.3] coordinates {
+        ($(N.north west) + (0.1ex,0)$)
+        ($(N.north)      + (0,0.5ex)$)
+        ($(N.north east) + (0,0)$)
+    };
+  }
+  \tikzexternalenable
+}
+
+\usepackage{needspace}
+\pretocmd{\section}{\needspace{10\baselineskip}}{}{}
+
+\newcommand{\vocab}[1]{\emph{\sffamily #1}}
+
+\settasks{
+  label = {\arabic*.},
+  label-width = 2em,
+}
+
+\gappto{\UrlBreaks}{\UrlOrds}
+
+\usepackage[version=4]{mhchem}

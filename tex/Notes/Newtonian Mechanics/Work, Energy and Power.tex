@@ -1,0 +1,134 @@
+\chapter{Work, Energy and Power}
+
+\section{Work and Energy}
+
+\begin{definition}
+    \vocab{Work} ($W$) is done when a force moves its point of application in the direction of the force. Mathematically, \[W = F s \cos \t = \int F \dotp \d s,\] where the displacement $s$ is at an angle $\t$ to the direction of the force $F$.
+\end{definition}
+
+Work is a scalar quantity. Its SI unit is the joule (J).
+
+\subsection{Work Done by a Gas}
+
+\begin{proposition}
+    The work done $W$ by a gas expanding its volume by $\D V$ against an external pressure $p$ is given by \[W = p \D V = \int p \d V.\]
+\end{proposition}
+\begin{proof}
+    We have $W = F s = p A s = p \D v$.
+\end{proof}
+
+\section{Energy}
+
+\begin{definition}
+    \vocab{Energy} is the ability to do work.
+\end{definition}
+
+Energy is a scalar quantity. Its SI unit is the joule (J).
+
+We can think of work as an energy transfer. If the work done on a system is positive, energy is transferred to the system. If the work done is negative, energy is transferred from the system.
+
+\begin{law}[Conservation of Energy]
+    Energy can neither be destroyed nor created in any process, but it can be converted from one form to another, and transferred from one body to another.
+\end{law}
+
+The law of conservation of energy implies that the total energy output of a machine should equal its energy input. In practice however, the \emph{useful} energy output of a machine is usually less than its energy input. This is because some work has to be done against dissipative forces (e.g. friction).
+
+\begin{definition}
+    The \vocab{efficiency} ($\eta$) of a machine is measured by the ratio \[\eta = \frac{\text{useful energy output}}{\text{energy input}}.\]
+\end{definition}
+
+\subsection{Kinetic Energy}
+
+\begin{definition}
+    The \vocab{kinetic energy} (KE, $E_k$) of a body is its ability to do work due to (or as a result of) its motion.
+\end{definition}
+
+Kinetic energy can be taken as equal to the work done to bring the body from rest to speed.
+
+\begin{proposition}
+    The kinetic energy $E_k$ of a body of mass $m$ moving at speed $v$ is given by \[E_k = \frac12 mv^2.\]
+\end{proposition}
+\begin{proof}
+    Consider a body of mass $m$ accelerated from rest to speed $v$ by a constant force $F$ moving it through a displacement $s$.
+
+    Since $F$ is constant, there is constant acceleration. Invoking the equations of motion, we see that \[v^2 = 0^2 + 2as \implies s = \frac{v^2}{2a}.\] Thus, $E_k$, which is equal to the work done to accelerate the body, is given by \[E_k = Fs = \bp{ma}\bp{\frac{v^2}{2a}} = \frac12 mv^2.\]
+\end{proof}
+
+\begin{theorem}[Work-Energy Theorem]
+    The work done by a net force on a body is equal to the change in kinetic energy of the body. \[W = \D E_k.\]
+\end{theorem}
+
+\subsection{Potential Energy}
+
+\begin{definition}
+    The \vocab{potential energy} (PE, $U$) of a body is its ability to do work due to (or as a result of) its position and/or shape.
+\end{definition}
+
+In a force field, the direction of the field's force is always towards lower potential energy. If a body is moved in directions perpendicular to the field, its potential energy will remain the same.
+
+The force experienced by a stationary body at a point in a force field is numerical equal (but opposite in sign) to the potential energy gradient at that point, i.e. \[F = -\der{U}{x}.\]
+
+\subsection{Gravitational Potential Energy}
+
+\begin{definition}
+    The \vocab{gravitational potential energy} (GPE, $E_p$) of a body is its ability to do work due to its position.
+\end{definition}
+
+Gravitational potential energy can be taken as equal to work done against gravity to elevate the body from some reference plane to that position.
+
+\begin{proposition}
+    The gravitational potential energy $E_p$ of a body of mass $m$ at a height $h$ (above some reference plane near the Earth's surface) is given by \[E_p = mgh.\]
+\end{proposition}
+\begin{proof}
+    Consider a body of mass $m$ elevated without acceleration by a constant force $F$ through a vertical displacement $h$ near the Earth's surface.
+
+    Since there is no acceleration, \[F - W = 0 \implies F = mg.\] Hence, the gravitational potential energy may be calculated as \[E_p = Fh = mgh.\]
+\end{proof}
+
+Here, $h$ is assumed to be small compared to the Earth's radius so that the value of $g$ may be taken as constant.
+
+\subsection{Elastic Potential Energy}
+
+\begin{definition}
+    The \vocab{elastic potential energy} (EPE, $E_s$) of an elastic body is its ability to work due to its changed shape.
+\end{definition}
+
+Elastic potential energy may be taken as equal to the work done to change the shape of the body.
+
+\begin{proposition}
+    The elastic potential energy $E_s$ of an elastic body with spring constant $k$ and extension $x$ is given by \[E_s = \frac12 kx^2.\]
+\end{proposition}
+\begin{proof}
+    Consider an elastic body of spring constant $k$ extended by an external force $F$ to an extension $x$. By Hooke's law, $F = kx$, so \[E_s = \int F \d x = \int kx \d x = \frac12 kx^2.\]
+\end{proof}
+
+$E_s$ is also given by the signed area under the $F$-$x$ graph.
+
+\subsection{Mechanical Energy}
+
+\begin{definition}
+    The \vocab{mechanical energy} (ME) of a system is the sum of its kinetic and potential energies.
+\end{definition}
+
+\begin{law}[Conservation of Mechanical Energy]
+    In the absence of non-conservative forces, the total mechanical energy of an isolated system remains constant. \[(E_k + E_p)_i = (E_k + E_p)_f.\]
+\end{law}
+
+Due to the law of conservation of energy, we have the following (more general) result, which accounts for the presence of dissipative forces: \[(E_k + E_p)_i + W_d = (E_k + E_p)_f.\] Note that $W_d$ is negative since the forces are dissipative and hence act in a direction opposite to the displacement.
+
+\section{Power}
+
+\begin{definition}
+    \vocab{Power} ($P$) is the work done (or energy converted) per unit time. \[P = \der{W}{t}.\]
+\end{definition}
+
+Power is a scalar quantity. Its SI unit is the watt (W).
+
+\begin{proposition}
+   If a constant force $F$ is acting on an object moving at velocity $v$, the power delivered to the object is given by \[P = Fv.\]
+\end{proposition}
+\begin{proof}
+    By the definition of power, \[P = \der{W}{t} = \der{(Fs)}{t} = F \der{s}{t} = F v.\]
+\end{proof}
+
+The efficiency of a machine can be expressed in terms of power: \[\eta = \frac{\text{useful power output}}{\text{power input}}.\]

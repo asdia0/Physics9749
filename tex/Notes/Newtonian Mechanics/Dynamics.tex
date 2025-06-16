@@ -1,0 +1,117 @@
+\chapter{Dynamics}
+
+\section{Newton's Laws of Motion}
+
+\begin{law}[Newton's Laws of Motion]
+    \phantom{.}
+    \begin{enumerate}
+        \item An object at rest will remain at rest and an object in motion will remain in motion at constant velocity in the absence of an external resultant force.
+        \item The rate of change of momentum of a body is directly proportional to the resultant force acting on the body and occurs in the direction of the resultant force.
+        \item If body A exerts a force on body B, then body B exerts a force of the same type that is equal in magnitude and opposite in direction on body A.
+    \end{enumerate}
+\end{law}
+
+\subsection{Mass and Weight}
+
+Newton's first law suggests that matter has a property called inertia.
+
+\begin{definition}
+    \vocab{Inertia} is the resistance to acceleration upon the application of a force.
+\end{definition}
+
+\begin{definition}
+    The \vocab{mass} of a body is a measure of its inertia.
+\end{definition}
+
+Mass is a scalar quantity. Its SI unit is kilogram (kg).
+
+\begin{definition}
+    \vocab{Weight} is the force experienced by a mass in a gravitational field.
+\end{definition}
+
+Weight is a vector quantity. Its SI unit is newton (N).
+
+The weight $W$ of a body is related to its mass $m$ and the acceleration of free fall $g$ by \[W = mg.\]
+
+\subsection{Momentum, Force and Impulse}
+
+\begin{definition}
+    The \vocab{linear momentum} ($p$) of a body is the product of its mass $m$ and its velocity $v$: \[p = mv.\]
+\end{definition}
+
+Momentum is a vector quantity. Its SI unit is kilogram-metre per second (kg m s$^{-1}$). The direction of momentum is the same as the direction of the velocity.
+
+In accordance with Newton's second law,
+
+\begin{definition}
+    \vocab{Force} ($F$) is the rate of change of momentum of the body acted upon. \[F = \der{p}{t}.\]
+\end{definition}
+
+Force is a vector quantity. Its SI unit is newton (N).
+
+In the case of \emph{constant mass}, then \[F = \der{(mv)}{t} = m \der{v}{t} = ma.\]
+
+\begin{definition}
+    \vocab{Impulse} ($J$) is the product of the force $F$ and the time interval $\D t$ during which the force acts. \[J = F \D t = \int F \d t.\]
+\end{definition}
+
+Impulse is a vector quantity and has the same direction as the applied force. Its SI unit is newton-second (N s).
+
+\begin{theorem}[Impulse-Momentum Theorem]
+    Impulse is equal to the change in momentum.
+\end{theorem}
+\begin{proof}
+    By Newton's second law, we have \[J = \int F \d t = \int \der{p}{t} \d t = \int \d p = \D p.\]
+\end{proof}
+
+\subsection{Action-Reaction Pairs}
+
+Newton's third law implies that forces occur in action-reaction pairs.
+
+\begin{definition}
+    An \vocab{action-reaction pair} of forces are two forces which fulfil the following conditions:
+    \begin{itemize}
+        \item the two forces act on two different bodies,
+        \item the forces are equal in magnitude,
+        \item the forces are opposite in direction, and
+        \item the forces are of the same type.
+    \end{itemize} 
+\end{definition}
+
+\section{Conservation of Momentum}
+
+\begin{law}[Conservation of Momentum]
+    The total momentum of a system is constant, provided no resultant external force acts on the system.
+\end{law}
+\begin{proof}[Justification]
+    Let body A have mass $m_1$ and initial velocity $u_1$. Let body B have mass $m_2$ and initial velocity $u_2$. Suppose bodies A and B collide. During the collision, body A exerts a force $F_2$ on body B, and body B exerts a force $F_1$ on body A. By Newton's third law, these forces are equal and opposite: \[F_2 = -F_1.\] Both forces act for the same time $\D t$, hence the impulses of the two forces are equal and opposite: \[J_2 = F_2 \D t = -F_1 \D t = -J_1.\] Since $J = \D p = m \D v$, we have \[m_2 \bp{v_2 - u_2} = -m_1 \bp{v_1 - u_1}.\] Rearranging, we get \[m_1 u_1 + m_2 u_2 = m_1 v_1 + m_2 v_2,\] so momentum is conserved.
+\end{proof}
+
+\subsection{Elastic Collisions}
+
+\begin{definition}
+    In an \vocab{elastic collision}, total kinetic energy is conserved.
+\end{definition}
+
+\begin{proposition}
+    In an elastic collision, the relative speed of approach of the two bodies is equal to the relative speed of separation.
+\end{proposition}
+\begin{proof}
+    Consider two bodies A and B, with mass $m_1$ and $m_2$ respectively, colliding head-on elastically with each other. The initial speeds of A and B are $u_1$ and $u_2$ respectively. After the collision, A and B move off with final speeds $v_1$ and $v_2$ respectively.
+
+    By the law of conservation of momentum, \[m_1 u_1 + m_2 u_2 = m_1 v_1 + m_2 v_2.\] Rewriting, we see that
+    \begin{equation}\label{eqn:elastic-1}
+        m_1 \bp{u_1 - v_1} = m_2 \bp{v_2 - u_2}.
+    \end{equation}
+    Since kinetic energy is conserved, \[\frac12 m_1 u_1^2 + \frac12 m_2 u_2^2 = \frac12 m_1 v_1^2 + \frac12 m_2 v_2^2.\] Rewriting,
+    \begin{equation}\label{eqn:elastic-2}
+        m_1\bp{u_1 + v_1}\bp{u_1 - v_1} = m_2 \bp{v_2 + u_2}\bp{v_2 - u_2}.
+    \end{equation}
+    Dividing (\ref{eqn:elastic-2}) by (\ref{eqn:elastic-1}), we obtain \[u_1 + v_1 = v_2 + u_2 \implies u_1 - u_2 = -\bp{v_1 - v_2},\] so the relative speed of approach is equal to the relative speed of separation as desired.
+\end{proof}
+
+\subsection{Inelastic Collisions}
+
+\begin{definition}
+    In an \vocab{elastic collision}, total kinetic energy is not conserved. In a \vocab{completely inelastic collision}, the colliding bodies stick together and move off as one body after the collision.
+\end{definition}
